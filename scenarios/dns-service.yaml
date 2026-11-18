@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dns-demo-service
+  namespace: scenario-dns
+spec:
+  selector:
+    app: dns-demo-server
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: ClusterIP
